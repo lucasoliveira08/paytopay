@@ -4,8 +4,7 @@
 <br />
 <div align="center">
 
-  <h2 align="center">Project</h2>
-  <h3 align="center">Pay to Pay</h3>
+  <h2 align="center">Pay to Pay</h2>
 
   <p align="center">
     An awesome project that allows transfer between different users
