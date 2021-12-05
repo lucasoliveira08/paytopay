@@ -1,10 +1,5 @@
 <div id="top"></div>
 
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -13,7 +8,7 @@
   <h3 align="center">Pay to Pay</h3>
 
   <p align="center">
-    An awesome project
+    An awesome project that allows transfer between different users
     <br />
     <br />
     <a href="https://github.com/lucasoliveira08/paytopay/issues">Report Bug</a>
