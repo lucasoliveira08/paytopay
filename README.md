@@ -1,9 +1,6 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -131,9 +128,9 @@ It is an attempt to create a hybrid version between Clean and DDD, but **not all
 
 You can use the **postman** to test these features
 
-###Register
+### Register
 
-####Request
+#### Request
 
 `POST /api/auth/register`
 
@@ -150,7 +147,7 @@ You can use the **postman** to test these features
 `Role 1 => lojista
  Role 2 => Consumidor`
 
-####Response
+#### Response
 `HTTP/1.1 201 Created`
 ```json
 {
@@ -158,9 +155,9 @@ You can use the **postman** to test these features
 }
 ```
 
-###Login
+### Login
 
-####Request
+#### Request
 
 `POST /api/auth/login`
 
@@ -171,7 +168,7 @@ You can use the **postman** to test these features
 }
 ```
 
-####Response
+#### Response
 `HTTP/1.1 200 Success`
 ```json
 {
@@ -181,13 +178,13 @@ You can use the **postman** to test these features
 }
 ```
 
-###Logout
+### Logout
 
-####Request
+#### Request
 
 `POST /api/auth/logout`
 
-####Response
+#### Response
 `HTTP/1.1 200 Success`
 ```json
 {
@@ -195,13 +192,13 @@ You can use the **postman** to test these features
 }
 ```
 
-###Get balance
+### Get balance
 
-####Request
+#### Request
 
 `POST /api/auth/balance`
 
-####Response
+#### Response
 `HTTP/1.1 200 Success`
 ```json
 {
@@ -209,9 +206,9 @@ You can use the **postman** to test these features
 }
 ```
 
-###Make a deposit
+### Make a deposit
 
-####Request
+#### Request
 
 `POST /api/auth/deposit`
 
@@ -221,7 +218,7 @@ You can use the **postman** to test these features
 }
 ```
 
-####Response
+#### Response
 `HTTP/1.1 201 Created`
 
 ```json
@@ -231,9 +228,9 @@ You can use the **postman** to test these features
 ```
 
 
-###Make a transfer to another user
+### Make a transfer to another user
 
-####Request
+#### Request
 
 `POST /api/auth/transfer`
 
@@ -243,7 +240,7 @@ You can use the **postman** to test these features
 }
 ```
 
-####Response
+#### Response
 `HTTP/1.1 201 Created`
 
 ```json
@@ -297,13 +294,5 @@ Portfolio: <a href="https://lucas-oliveira.com">https://lucas-oliveira.com
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/lucasoliveira08/paytopay/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/lucasoliveira08/paytopay/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/lucasoliveira08/paytopay/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/lucasoliveira08/paytopay/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lucasgoliveira/
