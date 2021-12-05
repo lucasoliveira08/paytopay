@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">Project</h3>
+  <h2 align="center">Project</h2>
   <h3 align="center">Pay to Pay</h3>
 
   <p align="center">
