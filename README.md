@@ -34,6 +34,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -251,8 +252,8 @@ You can use the **postman** to test these features
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Deploy in a real server
-- [ ] Create tests
+- [ ] Deploy in a real server;
+- [ ] Create automated tests.
 
 See the [open issues](https://github.com/lucasoliveira08/paytopay/issues) for a full list of proposed features (and known issues).
 
