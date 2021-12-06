@@ -37,10 +37,10 @@ class AuthController extends Controller
     {
         try{
             auth('api')->logout();
-            return response()->json(['mensagem' => 'Logout realizado com sucesso!']);
+            return response()->json(['message' => 'Logout realizado com sucesso!']);
         } catch (\Exception $exception) {
             return response()->json(['codigo' => 400,
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 

@@ -81,7 +81,7 @@ It is an attempt to create a hybrid version between Clean and DDD, but **not all
    ```bash
    $ composer install
    ```
-3. Rename the file  `.env.example` to `.env` and change these informations according to your SGBD 
+3. Rename the file  `.env.example` to `.env` and change these informations according to your DBMS 
    ```md
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -131,22 +131,24 @@ You can use the **postman** to test these features
 
 ```json
 {
-    "name": "John Doe",
-    "cpf_cnpj": "46180395667",
-    "email": "john@doe.com",
+    "name": "Lojista 1",
+    "cpf_cnpj": "21166073000128",
+    "email": "lojista1@paytopay.com",
     "password": "123456789",
     "role": 1
 }
 ```
 
-`Role 1 => lojista
- Role 2 => Consumidor`
+| Role     | Description |
+| ---      | ---         |
+| 1        | Lojista     |
+| 2        | Consumidor  |
 
 #### Response
 `HTTP/1.1 201 Created`
 ```json
 {
-    "mensagem": "Usuário criado com sucesso!"
+    "message": "Usuário criado com sucesso!"
 }
 ```
 
@@ -158,7 +160,7 @@ You can use the **postman** to test these features
 
 ```json
 {
-    "email": "exemplo@exemplo.com",
+    "email": "lojista1@paytopay.com",
     "password": "123456789"
 }
 ```
@@ -183,7 +185,7 @@ You can use the **postman** to test these features
 `HTTP/1.1 200 Success`
 ```json
 {
-    "mensagem": "Logout realizado com sucesso!"
+    "message": "Logout realizado com sucesso!"
 }
 ```
 
@@ -209,7 +211,7 @@ You can use the **postman** to test these features
 
 ```json
 {
-    "value": "500.80"
+    "value": 500.80
 }
 ```
 
@@ -218,7 +220,7 @@ You can use the **postman** to test these features
 
 ```json
 {
-    "mensagem": "Depósito realizado com sucesso!"
+    "message": "Depósito realizado com sucesso!"
 }
 ```
 
@@ -231,7 +233,9 @@ You can use the **postman** to test these features
 
 ```json
 {
-    "value": "500.80"
+	"email": "lojista@paytopay.com.br",
+	"value": 120.00,
+	"message": "Payment to our cloud"
 }
 ```
 
@@ -240,7 +244,7 @@ You can use the **postman** to test these features
 
 ```json
 {
-    "mensagem": "Transferência realizada com sucesso!"
+    "message": "Transferência realizada com sucesso!"
 }
 ```
 

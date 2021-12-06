@@ -31,7 +31,7 @@ class UserRepository
             return $user->with('wallet')->get()->first();
         } catch (\Exception $exception) {
             return response()->json(['codigo' => $exception->getCode(),
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 
@@ -43,7 +43,7 @@ class UserRepository
             return $user;
         } catch (\Exception $exception) {
             return response()->json(['codigo' => $exception->getCode(),
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 
@@ -54,7 +54,7 @@ class UserRepository
             return $user;
         } catch (\Exception $exception) {
             return response()->json(['codigo' => $exception->getCode(),
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 }

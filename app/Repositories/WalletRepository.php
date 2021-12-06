@@ -22,7 +22,7 @@ class WalletRepository
             return $wallet;
         } catch (\Exception $exception) {
             return response()->json(['codigo' => $exception->getCode(),
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 

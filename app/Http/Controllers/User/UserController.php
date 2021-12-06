@@ -24,7 +24,7 @@ class UserController extends Controller
             return $user;
         } catch (\Exception $exception) {
             return response()->json(['codigo' => 400,
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 }

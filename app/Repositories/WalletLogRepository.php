@@ -23,7 +23,7 @@ class WalletLogRepository
             return $log;
         } catch (\Exception $exception) {
             return response()->json(['codigo' => $exception->getCode(),
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
 
     }
@@ -39,7 +39,7 @@ class WalletLogRepository
             return $wallet;
         } catch (\Exception $exception) {
             return response()->json(['codigo' => $exception->getCode(),
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 

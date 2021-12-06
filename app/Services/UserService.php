@@ -48,7 +48,7 @@ class UserService
             if (is_null($userCreate)) {
                 DB::rollBack();
                 return [
-                    'mensagem' => 'Falha ao criar usuário'
+                    'message' => 'Falha ao criar usuário'
                 ];
             }
 
@@ -56,7 +56,7 @@ class UserService
             if (is_null($roleCreate)) {
                 DB::rollBack();
                 return [
-                    'mensagem' => 'Falha ao atribuir perfil ao usuário'
+                    'message' => 'Falha ao atribuir perfil ao usuário'
                 ];
             }
 
@@ -64,13 +64,13 @@ class UserService
             if (is_null($walletCreate)) {
                 DB::rollBack();
                 return [
-                    'mensagem' => 'Falha ao criar carteira do usuário'
+                    'message' => 'Falha ao criar carteira do usuário'
                 ];
             }
 
             DB::commit();
 
-            return ['mensagem' => 'Usuário criado com sucesso!'];
+            return ['message' => 'Usuário criado com sucesso!'];
         });
     }
 

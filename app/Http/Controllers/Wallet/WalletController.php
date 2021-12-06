@@ -22,7 +22,7 @@ class WalletController extends Controller
             return response()->json(['value' => 'R$'.number_format($balance,2,',','.')], 200);
         } catch (\Exception $exception) {
             return response()->json(['codigo' => 400,
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 
@@ -31,10 +31,10 @@ class WalletController extends Controller
         $request->validated();
         try {
             $wallet = $this->walletService->doDeposit($request->all(), auth()->user());
-            return response()->json(['mensagem' => 'Depósito realizado com sucesso!'], 201);
+            return response()->json(['message' => 'Depósito realizado com sucesso!'], 201);
         } catch (\Exception $exception) {
             return response()->json(['codigo' => 400,
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 
@@ -46,7 +46,7 @@ class WalletController extends Controller
             return response()->json($wallet, 201);
         } catch (\Exception $exception) {
             return response()->json(['codigo' => 400,
-                'mensagem' => $exception->getMessage()]);
+                'message' => $exception->getMessage()]);
         }
     }
 }

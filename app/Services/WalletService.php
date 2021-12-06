@@ -40,7 +40,7 @@ class WalletService
             if (!$doDeposit) {
                 DB::rollBack();
                 return [
-                    'mensagem' => 'Erro para fazer o depósito!'
+                    'message' => 'Erro para fazer o depósito!'
                 ];
             }
 
@@ -48,13 +48,13 @@ class WalletService
 
             if ($this->checkEmailAuthorization()) {
                 return [
-                    'mensagem' => 'Erro ao enviar o email!'
+                    'message' => 'Erro ao enviar o email!'
                 ];
             }
 
             $user->notify(new TransactionNotify($doDeposit));
 
-            return ['mensagem' => 'Depósito realizado com sucesso!'];
+            return ['message' => 'Depósito realizado com sucesso!'];
         });
     }
 
@@ -64,20 +64,20 @@ class WalletService
             $valueBalance = $this->walletLogRepository->getBalance($user->id);
             if ($valueBalance < $params['value'] && $valueBalance <= '0') {
                 return [
-                    'mensagem' => 'Você não possui saldo suficiente para fazer a transferência!'
+                    'message' => 'Você não possui saldo suficiente para fazer a transferência!'
                 ];
             }
 
             $checkPayee = $this->userService->getUser($params);
             if (empty($checkPayee)) {
                 return [
-                    'mensagem' => 'Usuário não foi encontrado na base de dados!'
+                    'message' => 'Usuário não foi encontrado na base de dados!'
                 ];
             }
 
             if ($checkPayee->id == auth()->user()->id){
                 return [
-                    'mensagem' => 'Não é possivel fazer transação com você mesmo!'
+                    'message' => 'Não é possivel fazer transação com você mesmo!'
                 ];
             }
 
@@ -85,7 +85,7 @@ class WalletService
             if (!$payeerWithdraw) {
                 DB::rollBack();
                 return [
-                    'mensagem' => 'Erro pra fazer a transferência!'
+                    'message' => 'Erro pra fazer a transferência!'
                 ];
             }
 
@@ -93,7 +93,7 @@ class WalletService
             if (!$payeeDeposit) {
                 DB::rollBack();
                 return [
-                    'mensagem' => 'Erro pra fazer a transferência!'
+                    'message' => 'Erro pra fazer a transferência!'
                 ];
             }
 
@@ -101,14 +101,14 @@ class WalletService
 
             if ($this->checkEmailAuthorization()) {
                 return [
-                    'mensagem' => 'Erro ao enviar o email!'
+                    'message' => 'Erro ao enviar o email!'
                 ];
             }
 
             $user->notify(new TransactionNotify($payeerWithdraw));
             $checkPayee->notify(new TransactionNotify($payeeDeposit));
 
-            return ['mensagem' => 'Transferência realizada com sucesso!'];
+            return ['message' => 'Transferência realizada com sucesso!'];
         });
     }
 
@@ -116,7 +116,7 @@ class WalletService
     {
         if ($this->checkActionAuthorization()) {
             return [
-                'mensagem' => 'Essa operação não foi autorizada!'
+                'message' => 'Essa operação não foi autorizada!'
             ];
         }
         $paramsLog = [
