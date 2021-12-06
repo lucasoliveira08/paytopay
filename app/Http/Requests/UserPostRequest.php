@@ -40,7 +40,7 @@ class UserPostRequest extends FormRequest
     {
         $errors = $validator->errors(); // Here is your array of errors
         $response = response()->json([
-            "message" => "Erro no envio de dados",
+            "message" => "Erro no envio de dados!",
             "detalhes" => $errors->messages()
         ], 422);
         throw new HttpResponseException($response);
